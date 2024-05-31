@@ -62,7 +62,7 @@ docker run --name nginx -v ~/nginx/html:/usr/share/nginx/html:ro -p 8080:80 -d n
 ![index_html](img/nginx_index_ok.png)
 
 
-# 5.e.
+# 6.a.
 
 Arrêt de l'image de Nginx
 
@@ -82,8 +82,31 @@ docker build -t my_nginx_image
 
 ![nginx_custom](img/nginx_custom.png)
 
+# 6.b.
+
 Lancement de la nouvelle image Nginx créée avec le Dockerfile
 
 ```
 docker run --name my_nginx_image -p 8080:80 -d my_nginx_image
 ```
+
+# 7
+
+```
+docker pull phpmyadmin
+docker pull mysql:5.7
+```
+
+![php_my_images](img/php_my_images.png)
+
+Activer les deux conteneurs
+
+```
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=ynov -d mysql:5.7
+```
+
+```
+docker run --name phpmyadmin --link mysql:db -p 8081:80 -d phpmyadmin
+```
+
+![php_my_images_active](img/php_my_images_active.png)
