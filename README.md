@@ -90,10 +90,10 @@ Lancement de la nouvelle image Nginx créée avec le Dockerfile
 docker run --name my_nginx_image -p 8080:80 -d my_nginx_image
 ```
 
-# 7
+# 7.a.
 
 ```
-docker pull phpmyadmin
+docker pull phpmyadmin/phpmyadmin
 docker pull mysql:5.7
 ```
 
@@ -102,11 +102,23 @@ docker pull mysql:5.7
 Activer les deux conteneurs
 
 ```
-docker run --name mysql -e MYSQL_ROOT_PASSWORD=ynov -d mysql:5.7
+docker run --name my-mysql -e MYSQL_ROOT_PASSWORD=ynov -d mysql:5.7
 ```
 
 ```
-docker run --name phpmyadmin --link mysql:db -p 8081:80 -d phpmyadmin
+docker run --name my-phpmyadmin --link my-mysql:db -e PMA_HOST=db -e PMA_PORT=3306 -e PMA_USER=root -e PMA_PASSWORD=ynov -p 8081:80 -d phpmyadmin/phpmyadmin
 ```
 
 ![php_my_images_active](img/php_my_images_active.png)
+
+# 7.b.
+
+Connexion à l'interface de phpmyadmin
+
+![phpmyadmin_UI](/img/phpmyadmin_UI.png)
+
+Création de 2 tables, et insertions de données
+
+![table_eleve](/img/table_eleve.png)
+
+![table_note](/img/table_note.png)
