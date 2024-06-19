@@ -80,6 +80,8 @@ Création d'une nouvelle image custom
 docker build -t my_nginx_image
 ```
 
+-t permet de dire que l'on définit un tag pour le conteneur
+
 ![nginx_custom](img/nginx_custom.png)
 
 # 6.b.
@@ -122,3 +124,19 @@ Création de 2 tables, et insertions de données
 ![table_eleve](/img/table_eleve.png)
 
 ![table_note](/img/table_note.png)
+
+# 8
+
+Création du fichier `docker-compose.yml`
+
+![docker_compose_file](/img/docker-compose-file.png)
+
+Démarrage des conteneurs via le fichier et docker-compose
+
+```
+docker-compose up -d
+```
+
+-d permet de lancer le conteneur en arrière plan, évitant de prendre le terminal 
+
+![docker_compose](/img/docker-compose.png)
