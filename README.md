@@ -1,5 +1,7 @@
 # TP Docker
 
+## Luc Seiler
+
 <!-- ![docker_logo](img/docker_logo.png) -->
 <!-- ![nginx_logo](img/nginx_logo.png) -->
 
@@ -140,3 +142,11 @@ docker-compose up -d
 -d permet de lancer le conteneur en arrière plan, évitant de prendre le terminal 
 
 ![docker_compose](/img/docker-compose.png)
+
+# 8.a
+
+# 8.b
+
+On peut rajouter des configurations en plus dans le fichier docker-compose.yml
+
+![phpmyadmin_docker_compse](/img/phpmyadmin_docker-compose.png)
