@@ -145,6 +145,12 @@ docker-compose up -d
 
 # 8.a
 
+Le fichier `docker-compose.yml` permet un meilleur confort de configuration. Il permet de configurer tous les conteneurs en un seul fichier
+
+Il est également pratique si l'on veut donner une certaine configuration à quelqu'un. Il n'aura qu'à récupérer le fichier et taper une seule commande. Cela simplifie donc le déploiement, et évite de faire des erreurs dans les différentes commandes qu'il peut y avoir pour récupérer un conteneur, d'une certaine version, configurer la base de données, l'utilisateur...
+
+Il permet de rendre une configuration plus facile à gérer. Il n'y aura qu'à modifier ce fichier et le renvoyer/réexecuter
+
 # 8.b
 
 On peut rajouter des configurations en plus dans le fichier docker-compose.yml
