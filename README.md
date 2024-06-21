@@ -159,4 +159,8 @@ On peut rajouter des configurations en plus dans le fichier docker-compose.yml
 
 # 9
 
+# 9.a
+
+![docker_compose_2](img/docker-compose-file_9.png)
+
 ![docker_compose_2](img/docker-compose_9.png)
