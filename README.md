@@ -156,3 +156,7 @@ Il permet de rendre une configuration plus facile à gérer. Il n'y aura qu'à m
 On peut rajouter des configurations en plus dans le fichier docker-compose.yml
 
 ![phpmyadmin_docker_compse](img/phpmyadmin_docker-compose.png)
+
+# 9
+
+![docker_compose_2](img/docker-compose_9.png)
