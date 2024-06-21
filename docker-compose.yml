@@ -5,21 +5,24 @@ services:
     image: praqma/network-multitool
     container_name: web
     networks:
-      - frontend
+      - front
+    depends_on:
+      - app
+      - db
 
   app:
     image: praqma/network-multitool
     container_name: app
     networks:
-      - frontend
-      - backend
+      - front
+      - back
 
   db:
     image: praqma/network-multitool
     container_name: db
     networks:
-      - backend
+      - back
 
 networks:
-  frontend:
-  backend:
+  front:
+  back:

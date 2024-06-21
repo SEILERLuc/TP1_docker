@@ -106,14 +106,16 @@ docker pull mysql:5.7
 Activer les deux conteneurs
 
 ```
-docker run --name my-mysql -e MYSQL_ROOT_PASSWORD=ynov -d mysql:5.7
+docker run --name my-mysql -e MYSQL_DATABASE=ynov -e MYSQL_USER=user -e MYSQL_PASSWORD=ynov -e MYSQL_ROOT_PASSWORD=ynov -d mysql:5.7
 ```
 
 ```
-docker run --name my-phpmyadmin --link my-mysql:db -e PMA_HOST=db -e PMA_PORT=3306 -e PMA_USER=root -e PMA_PASSWORD=ynov -p 8081:80 -d phpmyadmin/phpmyadmin
+docker run --name my-phpmyadmin --link my-mysql:db -e PMA_HOST=my-mysql -e PMA_PORT=3306 -e PMA_USER=user -e PMA_PASSWORD=ynov -p 8081:80 -d phpmyadmin/phpmyadmin
 ```
 
 ![php_my_images_active](img/php_my_images_active.png)
+
+![php_mysql](img/pma_mysql.png)
 
 # 7.b.
 
