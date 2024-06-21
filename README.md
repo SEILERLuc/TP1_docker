@@ -119,29 +119,29 @@ docker run --name my-phpmyadmin --link my-mysql:db -e PMA_HOST=db -e PMA_PORT=33
 
 Connexion à l'interface de phpmyadmin
 
-![phpmyadmin_UI](/img/phpmyadmin_UI.png)
+![phpmyadmin_UI](img/phpmyadmin_UI.png)
 
 Création de 2 tables, et insertions de données
 
-![table_eleve](/img/table_eleve.png)
+![table_eleve](img/table_eleve.png)
 
-![table_note](/img/table_note.png)
+![table_note](img/table_note.png)
 
 # 8
 
 Création du fichier `docker-compose.yml`
 
-![docker_compose_file](/img/docker-compose-file.png)
+![docker_compose_file](img/docker-compose-file.png)
 
 Démarrage des conteneurs via le fichier et docker-compose
 
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 -d permet de lancer le conteneur en arrière plan, évitant de prendre le terminal 
 
-![docker_compose](/img/docker-compose.png)
+![docker_compose](img/docker-compose.png)
 
 # 8.a
 
@@ -155,4 +155,4 @@ Il permet de rendre une configuration plus facile à gérer. Il n'y aura qu'à m
 
 On peut rajouter des configurations en plus dans le fichier docker-compose.yml
 
-![phpmyadmin_docker_compse](/img/phpmyadmin_docker-compose.png)
+![phpmyadmin_docker_compse](img/phpmyadmin_docker-compose.png)
