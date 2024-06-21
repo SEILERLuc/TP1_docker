@@ -131,9 +131,9 @@ Création de 2 tables, et insertions de données
 
 # 8
 
-Création du fichier `docker-compose.yml`
+Création du fichier `docker-compose.yml` (`docker-compose_pma_mysql.yml`)
 
-![docker_compose_file](img/docker-compose-file.png)
+<!-- ![docker_compose_file](img/docker-compose-file.png) -->
 
 Démarrage des conteneurs via le fichier et docker-compose
 
@@ -144,6 +144,8 @@ docker compose up -d
 -d permet de lancer le conteneur en arrière plan, évitant de prendre le terminal 
 
 ![docker_compose](img/docker-compose.png)
+
+Je peux toujours accéder à phpmyadmin, port 8081
 
 # 8.a
 
